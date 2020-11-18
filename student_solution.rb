@@ -82,17 +82,18 @@ puts colors.join(" ").upcase
 #1 
 
 def find_area height, width
-
+  height * width
 end
 
+puts find_area(5, 3)
 #2
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 
 def multiply_each_by_five arr
-
+  arr.map{|num| puts num * 5}
 end
 
-
+multiply_each_by_five(nums)
 # Methods With a Hash
 
 book = {
@@ -116,10 +117,12 @@ table = {
 }
 
 def print_price hash
-  
+  hash[:price]
 end
 
+puts print_price(book)
 
 def print_item_sums(hash1, hash2)
-  
+  hash1[:price] + hash2[:price]
 end
+puts print_item_sums(lamp, table)
